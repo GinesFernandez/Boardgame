@@ -1,0 +1,68 @@
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\bin\Debug\ColourMemoryGame.exe.config
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\bin\Debug\ColourMemoryGame.exe
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\bin\Debug\ColourMemoryGame.pdb
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.csprojResolveAssemblyReference.cache
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\Views\MainWindow.baml
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\Views\MainWindow.g.cs
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\App.g.cs
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame_MarkupCompile.cache
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.g.resources
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.Properties.Resources.resources
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.csproj.GenerateResource.Cache
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.exe
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.pdb
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\GeneratedInternalTypeHelper.g.cs
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame_MarkupCompile.lref
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.Unity.dll
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.Unity.xml
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+c:\users\yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\Controls\BoardControl.baml
+C:\Users\Yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\Controls\BoardControl.g.cs
+C:\Users\Yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\Controls\CardControl.g.cs
+C:\Users\Yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\Controls\CardControl.baml
+C:\Users\Yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\bin\Debug\Assets\Images\CardBack.png
+C:\Users\Yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\bin\Debug\Assets\Images\Logo.png
+C:\Users\Yo\documents\visual studio 2017\Projects\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame_Content.g.cs
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.csproj.AssemblyReference.cache
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\Controls\BoardControl.g.cs
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\Controls\CardControl.g.cs
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\Views\MainWindow.g.cs
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\App.g.cs
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame_Content.g.cs
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame_MarkupCompile.cache
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame_MarkupCompile.lref
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\Assets\Images\CardBack.png
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\Assets\Images\Logo.png
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\ColourMemoryGame.exe.config
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\ColourMemoryGame.exe
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\ColourMemoryGame.pdb
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\Common.dll
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\Common.pdb
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\Controls\BoardControl.baml
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\Controls\CardControl.baml
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\Views\MainWindow.baml
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.g.resources
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.Properties.Resources.resources
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.csproj.GenerateResource.cache
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.csproj.CoreCompileInputs.cache
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.csproj.CopyComplete
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.exe
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\ColourMemoryGame.pdb
+C:\Users\Ginés\OneDrive\Apps\ColourMemoryGame\ColourMemoryGame\obj\Debug\Controls\CellControl.g.cs

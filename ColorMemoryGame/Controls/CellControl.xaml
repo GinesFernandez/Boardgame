@@ -1,0 +1,35 @@
+﻿<view:CellControlMid x:Class="ColorMemoryGame.Controls.CellControl"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                     xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                     xmlns:converters="clr-namespace:ColorMemoryGame.Converters"
+                     xmlns:view="clr-namespace:ColorMemoryGame.Controls"
+                     mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300">
+
+    <view:CellControlMid.Resources>
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <converters:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter"/>
+        
+        <Thickness x:Key="thick">5,5,5,5</Thickness>
+    </view:CellControlMid.Resources>
+
+    <Grid x:Name="Layoutroot" Margin="1"
+          MouseUp="Layoutroot_MouseUp">
+
+        <Border BorderBrush="Blue" Background="Transparent" BorderThickness="{StaticResource thick}" CornerRadius="1"
+                Visibility="{Binding Cell.IsSelected, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+        <Border BorderBrush="Orange" Background="Transparent" BorderThickness="{StaticResource thick}" CornerRadius="1"
+                Visibility="{Binding Cell.IsWin, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+        <Image x:Name="oBack" Margin="{StaticResource thick}"
+               Source="{Binding Cell.Image}" Stretch="Fill"
+               Visibility="{Binding Cell.IsBack, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+        <Rectangle x:Name="oFront" Margin="{StaticResource thick}"
+                   Visibility="{Binding Cell.IsBack, Converter={StaticResource InverseBoolToVisibilityConverter}}"
+                   Fill="{Binding Cell.Brush}" />
+    </Grid>
+</view:CellControlMid>

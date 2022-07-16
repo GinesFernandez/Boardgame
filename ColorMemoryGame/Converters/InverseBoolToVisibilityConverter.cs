@@ -1,0 +1,26 @@
+﻿using System;
+using System.Windows;
+using System.Windows.Data;
+using System.Windows.Media.Imaging;
+
+namespace ColorMemoryGame.Converters
+{
+    public class InverseBoolToVisibilityConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            var val = value as bool?;
+            if (val == true)
+            {
+                return Visibility.Collapsed;
+            }
+
+            return Visibility.Visible;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
