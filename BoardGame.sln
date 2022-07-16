@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorMemoryGame", "ColorMemoryGame\ColorMemoryGame.csproj", "{22139B03-B3DD-469B-84AC-5D531A5D7F33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper", "Buscaminas\MineSweeper.csproj", "{3BCB9584-E247-4CC3-9B5E-3B341FA1D3FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper", "MineSweeper\MineSweeper.csproj", "{3BCB9584-E247-4CC3-9B5E-3B341FA1D3FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{37F6A30D-A4C1-443B-AAFF-284EFE2AE9D0}"
 EndProject

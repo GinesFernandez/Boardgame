@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Ginés\source\repos\boardgame\Buscaminas\obj\Debug\
+C:\Users\Ginés\source\repos\boardgame\MineSweeper\obj\Debug\
 ColourMemoryGame
 none
 false
 DEBUG;TRACE
-C:\Users\Ginés\source\repos\boardgame\Buscaminas\App.xaml
+C:\Users\Ginés\source\repos\boardgame\MineSweeper\App.xaml
 31915627981
 11544252491
-191430714069
+18-491064052
 123541423406
 Controls\BoardControl.xaml;Controls\CellControl.xaml;Views\MainWindow.xaml;
 
-True
+False
 
