@@ -7,7 +7,7 @@ namespace Common.Models
     {
         public CellPosition Pos { get; protected set; }
 
-        public abstract SolidColorBrush Brush { get; }
+        public virtual SolidColorBrush Brush { get; set; } = new SolidColorBrush(Colors.Black);
 
         private ImageSource _image;
         public ImageSource Image
@@ -19,6 +19,21 @@ namespace Common.Models
 
                 _image = value;
                 RaisePropertyChanged();
+            }
+        }
+
+        private bool _isSelected;
+        public bool IsSelected
+        {
+            get => _isSelected;
+            set
+            {
+                if (_isSelected == value) return;
+
+                _isSelected = value;
+                RaisePropertyChanged();
+
+                IsBack = !_isSelected;
             }
         }
 
