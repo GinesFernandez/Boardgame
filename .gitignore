@@ -48,3 +48,8 @@ Thumbs.db
 *.mov
 *.wmv
 
+# VStudio
+*.pdb
+*.vsidx
+*.suo
+*.cache
