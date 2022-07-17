@@ -22,21 +22,6 @@ namespace ColorMemoryGame.Models
 
         public override SolidColorBrush Brush => new SolidColorBrush(_color);
 
-        private bool _isSelected;
-        public bool IsSelected
-        {
-            get => _isSelected;
-            set
-            {
-                if (_isSelected == value) return;
-
-                _isSelected = value;
-                RaisePropertyChanged();
-
-                IsBack = !_isSelected;
-            }
-        }
-
         private bool _isWin;
         public bool IsWin
         {
