@@ -8,7 +8,7 @@ namespace ColorMemoryGame.Views
 
     public partial class MainWindow
     {
-        public MainWindowViewModel ViewModel => DataContext as MainWindowViewModel;
+        public override MainWindowViewModel ViewModel => DataContext as MainWindowViewModel;
 
         private void BoardControl_CellClicked(CellPosition pos)
         {
