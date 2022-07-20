@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper", "MineSweeper\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{37F6A30D-A4C1-443B-AAFF-284EFE2AE9D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Damas", "Damas\Damas.csproj", "{8BC0DF3C-CCF2-4485-8141-FA3C2C921CF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{37F6A30D-A4C1-443B-AAFF-284EFE2AE9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37F6A30D-A4C1-443B-AAFF-284EFE2AE9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37F6A30D-A4C1-443B-AAFF-284EFE2AE9D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BC0DF3C-CCF2-4485-8141-FA3C2C921CF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BC0DF3C-CCF2-4485-8141-FA3C2C921CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BC0DF3C-CCF2-4485-8141-FA3C2C921CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BC0DF3C-CCF2-4485-8141-FA3C2C921CF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
