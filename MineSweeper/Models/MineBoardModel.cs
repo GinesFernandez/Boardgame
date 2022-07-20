@@ -25,17 +25,14 @@ namespace MineSweeper.Models
             }
         }
 
-        public MineBoardModel(int rows = 10, int columns = 10, int mines = 20)
+        public MineBoardModel(int rows = 10, int columns = 10, int mines = 20) : base(rows, columns)
         {
             if (rows * columns < 2 || mines >= rows * columns)
             {
                 throw new InvalidOperationException("Too many mines!");
             }
 
-            Rows = rows;
-            Columns = columns;
             _mines = mines;
-
             GenerateCells();
         }
 

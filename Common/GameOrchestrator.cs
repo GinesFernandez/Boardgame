@@ -57,16 +57,29 @@ namespace Common
         public int Moves
         {
             get => _moves;
-            set
+            protected set
             {
-                if (_moves == value) return;
+                if (_moves == value)
+                    return;
 
                 _moves = value;
                 RaisePropertyChanged();
             }
         }
 
-        public int GameState { get; protected set; }
+        private int _gameState;
+        public int GameState
+        {
+            get => _gameState;
+            protected set
+            {
+                if (_gameState == value)
+                    return;
+
+                _gameState = value;
+                RaisePropertyChanged();
+            }
+        }
 
         public abstract bool IsWin { get; }
 

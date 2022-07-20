@@ -95,8 +95,6 @@
     </Compile>
     <Compile Include="Controls\BoardViewModel.cs" />
     <Compile Include="Controls\CellViewModel.cs" />
-    <Compile Include="Converters\InverseBoolToVisibilityConverter.cs" />
-    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="enums.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="Models\ColorBoardModel.cs" />
@@ -135,9 +133,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Assets\Images\CardBack.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

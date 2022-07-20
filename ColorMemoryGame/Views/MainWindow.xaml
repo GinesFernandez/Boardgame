@@ -5,7 +5,7 @@
                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                      xmlns:controls="clr-namespace:ColorMemoryGame.Controls"
                      xmlns:views="clr-namespace:ColorMemoryGame.Views"
-                     xmlns:converters="clr-namespace:ColorMemoryGame.Converters"
+                     xmlns:converters="clr-namespace:Common.Converters;assembly=Common"
                      WindowState="Normal" WindowStartupLocation="CenterScreen" Width="600" MinWidth="500" MinHeight="400"
                      Title="Color Memory"
                      mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="600">
@@ -64,7 +64,7 @@
             <TextBlock Text="Score:" Margin="{StaticResource commonMargin}"/>
 
             <TextBox IsReadOnly="True" Margin="{StaticResource commonMargin}" MinWidth="30"
-                     Text="{Binding Orchestrator.Moves}" TextAlignment="Right"/>
+                     Text="{Binding Orchestrator.Moves, Mode=OneWay}" TextAlignment="Right"/>
         </StackPanel>
 
         <StackPanel x:Name="stackWin" Grid.Row="1" Canvas.ZIndex="1"

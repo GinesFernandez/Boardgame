@@ -71,7 +71,10 @@
     <Compile Include="Base\PageBaseView.cs" />
     <Compile Include="Base\ViewModelBase.cs" />
     <Compile Include="Base\WindowBaseView.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\InverseBoolToVisibilityConverter.cs" />
     <Compile Include="Exceptions\BoardGameException.cs" />
+    <Compile Include="GameOrchestrator2p.cs" />
     <Compile Include="GameOrchestrator.cs" />
     <Compile Include="Models\BoardModel.cs" />
     <Compile Include="Models\CellModel.cs" />

@@ -98,8 +98,6 @@
     </Compile>
     <Compile Include="Controls\BoardViewModel.cs" />
     <Compile Include="Controls\CellViewModel.cs" />
-    <Compile Include="Converters\InverseBoolToVisibilityConverter.cs" />
-    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="enums.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="Models\MineBoardModel.cs" />
@@ -138,9 +136,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="logo.ico" />
     <Resource Include="Assets\Images\mine.png" />
