@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Common;
 using Common.Models;
 using Damas.Models;
@@ -29,12 +30,11 @@ namespace Damas.Services
         {
             Rows = rows;
             Columns = columns;
-            Moves = 0;
+            Moves = MovesP1 = MovesP2 = ScoreP1 = ScoreP2 = 0;
             GameState = (int)GameStates.WaitingMoveWhite;
-            RaisePropertyChanged(nameof(IsWin));
-            RaisePropertyChanged(nameof(IsP1Win));
-            RaisePropertyChanged(nameof(IsP2Win));
 
+            RefreshWin();
+            
             Board = new DamasBoardModel(Rows, Columns);
         }
 
@@ -81,6 +81,11 @@ namespace Damas.Services
                     }
                     break;
                 case GameStates.WhiteSelected:
+                    if (_lastCell == null)
+                    {
+                        throw new InvalidOperationException("_lastCell cannot be null");
+                    }
+
                     if (isCellSelected) //undo selection
                     {
                         cell.IsSelected = false;
@@ -95,21 +100,40 @@ namespace Damas.Services
                     }
 
                     //check if empty cell selected is valid:
-
-                    if (AreAdjacentsDown(_lastCell!.Pos, cell.Pos)) //moving forward (whites go down, blacks go up)
+                    if (!_lastCell.IsQueen)
                     {
-                        WhiteMove(cell);
-                        return;
+                        if (AreAdjacentsDown(_lastCell!.Pos, cell.Pos)) //moving forward (whites go down, blacks go up)
+                        {
+                            WhiteMove(cell);
+                            return;
+                        }
+                        if (IsWhiteEating(_lastCell.Pos, cell.Pos, out var eaten)) // eating black token
+                        {
+                            WhiteEat(cell, eaten!);
+                        }
+                    }
+                    else
+                    {
+                        if (IsValidBishopMove(_lastCell.Pos, cell.Pos, true, out var eaten))
+                        {
+                            if (eaten == null)
+                            {
+                                WhiteMove(cell);
+                                return;
+                            }
+
+                            WhiteEat(cell, eaten!);
+                        }
                     }
 
-                    if (IsWhiteEating(_lastCell.Pos, cell.Pos, out var eaten)) // eating black token
-                    {
-                        WhiteEat(cell, eaten!);
-                        return;
-                    }
-
+                    CheckVictoryCondition();
                     break;
                 case GameStates.BlackSelected:
+                    if (_lastCell == null)
+                    {
+                        throw new InvalidOperationException("_lastCell cannot be null");
+                    }
+
                     if (isCellSelected) //undo selection
                     {
                         cell.IsSelected = false;
@@ -124,19 +148,33 @@ namespace Damas.Services
                     }
 
                     //check if empty cell selected is valid:
-
-                    if (AreAdjacentsUp(_lastCell!.Pos, cell.Pos)) //moving forward (whites go down, blacks go up)
+                    if (!_lastCell.IsQueen)
                     {
-                        BlackMove(cell);
-                        return;
+                        if (AreAdjacentsUp(_lastCell!.Pos, cell.Pos)) //moving forward (whites go down, blacks go up)
+                        {
+                            BlackMove(cell);
+                            return;
+                        }
+                        if (IsBlackEating(_lastCell.Pos, cell.Pos, out var eaten)) //eating white token
+                        {
+                            BlackEat(cell, eaten!);
+                        }
+                    }
+                    else
+                    {
+                        if (IsValidBishopMove(_lastCell.Pos, cell.Pos, false, out var eaten))
+                        {
+                            if (eaten == null)
+                            {
+                                BlackMove(cell);
+                                return;
+                            }
+
+                            BlackEat(cell, eaten!);
+                        }
                     }
 
-                    if (IsBlackEating(_lastCell.Pos, cell.Pos, out eaten)) //eating white token
-                    {
-                        BlackEat(cell, eaten!);
-                        return;
-                    }
-
+                    CheckVictoryCondition();
                     break;
             }
         }
@@ -183,7 +221,7 @@ namespace Damas.Services
                 return false;
             }
 
-            eaten = (DamasCellModel)Board.CellsMatrix[pos1.PosY+1][pos1.PosX + (pos1.PosX < pos2.PosX ? 1 : -1)];
+            eaten = (DamasCellModel)Board.CellsMatrix[pos1.PosY + 1][pos1.PosX + (pos1.PosX < pos2.PosX ? 1 : -1)];
 
             if (!eaten.IsBlack) //eaten token must be black
             {
@@ -202,12 +240,70 @@ namespace Damas.Services
                 return false;
             }
 
-            eaten = (DamasCellModel)Board.CellsMatrix[pos1.PosY-1][pos1.PosX + (pos1.PosX < pos2.PosX ? 1 : -1)];
+            eaten = (DamasCellModel)Board.CellsMatrix[pos1.PosY - 1][pos1.PosX + (pos1.PosX < pos2.PosX ? 1 : -1)];
 
             if (!eaten.IsWhite) //eaten token must be white
             {
                 eaten = null;
                 return false;
+            }
+
+            return true;
+        }
+
+        private bool IsValidBishopMove(CellPosition pos1, CellPosition pos2, bool isWhite, out DamasCellModel? eaten)
+        {
+            //move must be diagonal:
+            if (Math.Abs(pos1.PosX - pos2.PosX) != Math.Abs(pos1.PosY - pos2.PosY))
+            {
+                eaten = null;
+                return false;
+            }
+
+            var isGoingDown = pos1.PosY < pos2.PosY;
+            var isGoingRight = pos1.PosX < pos2.PosX;
+            var cellsMoved = Math.Abs(pos1.PosX - pos2.PosX);
+
+            //populate cells passed in the movement:
+            List<DamasCellModel> cellsPassed = new List<DamasCellModel>();
+            for (int i = 1; i <= cellsMoved; i++)
+            {
+                cellsPassed.Add(
+                    (DamasCellModel)
+                        Board.CellsMatrix[pos1.PosY + (isGoingDown ? i : -i)]
+                                         [pos1.PosX + (isGoingRight ? i : -i)]
+                );
+            }
+
+            //check cellsPassed don't have obstacles in the middle:
+            if (cellsMoved > 2)
+            {
+                foreach (var cell in cellsPassed.GetRange(0, cellsPassed.Count - 2))
+                {
+                    if (!cell.IsEmpty)
+                    {
+                        eaten = null;
+                        return false;
+                    }
+                }
+            }
+
+            //Check if a token was eaten and it's valid: 
+            eaten = cellsMoved > 1 ? cellsPassed[cellsPassed.Count - 2] : null;
+
+            if (eaten != null)
+            {
+                //eaten token must be contrary color:
+                if (eaten.IsWhite && isWhite || eaten.IsBlack && !isWhite)
+                {
+                    eaten = null;
+                    return false;
+                }
+
+                if (eaten.IsEmpty) //not token eaten
+                {
+                    eaten = null;
+                }
             }
 
             return true;
@@ -224,6 +320,7 @@ namespace Damas.Services
             _lastCell.Value = CellState.Empty;
             _lastCell.IsSelected = false;
             GameState = (int)GameStates.WaitingMoveBlack;
+            Moves++;
             MovesP1++;
             _lastCell = null;
         }
@@ -249,7 +346,7 @@ namespace Damas.Services
             {
                 throw new InvalidOperationException("cell must be a empty");
             }
-            if (eaten.Value != CellState.BlackToken)
+            if (eaten.Value != CellState.BlackToken && eaten.Value != CellState.BlackQueen)
             {
                 throw new InvalidOperationException("eaten must be a black token");
             }
@@ -265,7 +362,7 @@ namespace Damas.Services
             {
                 throw new InvalidOperationException("cell must be empty");
             }
-            if (eaten.Value != CellState.WhiteToken)
+            if (eaten.Value != CellState.WhiteToken && eaten.Value != CellState.WhiteQueen)
             {
                 throw new InvalidOperationException("eaten must be a white token");
             }
@@ -273,6 +370,27 @@ namespace Damas.Services
             eaten!.Value = CellState.Empty;
             ScoreP2++;
             BlackMove(cell);
+        }
+
+        private void RefreshWin()
+        {
+            RaisePropertyChanged(nameof(IsWin));
+            RaisePropertyChanged(nameof(IsP1Win));
+            RaisePropertyChanged(nameof(IsP2Win));
+        }
+
+        private void CheckVictoryCondition()
+        {
+            if (ScoreP1 == Columns / 2 * 3)
+            {
+                GameState = (int)GameStates.EndedWinWhite;
+                RefreshWin();
+            }
+            else if (ScoreP2 == Columns / 2 * 3)
+            {
+                GameState = (int)GameStates.EndedWinBlack;
+                RefreshWin();
+            }
         }
     }
 }
